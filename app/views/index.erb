@@ -1,4 +1,13 @@
-<div class="container">
-<h1>Sinatra skeleton</h1>
 
-</div>
+<h1>Hello</h1>
+
+<% @projects.each do |project| %>
+	<div class="project" id="<%= project.id %>">
+		<h3><%= project.name %></h3>
+		<p><%= project.description %></p>
+		<p><a href="<%= project.production_url %>">Project Site</a></p>
+		<p><a href="<%= project.source_url %>">Github URL</a></p>
+		<p><%= project.location %></p>
+		<p>Image links here</p>
+	</div>
+<% end %>
