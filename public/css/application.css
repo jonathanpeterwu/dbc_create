@@ -6,3 +6,8 @@
   text-align: center;
 }
 
+.project_show {
+	background-color: blue;
+	width: 500px;
+	height: 180px;
+}

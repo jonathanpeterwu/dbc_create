@@ -8,27 +8,27 @@ get '/projects' do   #  projects#index
 end
 
 get '/projects/new' do # projects#new
-	
 	erb :new
 end
 
 post '/projects' do # projects#create
-
+	project = Project.create(params[:project])
+	redirect to "/projects/#{project.id}"
 end
 
 get '/projects/:id' do # projects#show
-
+	@project = Project.find params[:id]
 	erb :show
 end
 
 get '/projects/:id/edit' do # projects#edit
-
+	@project = Project.find params[:id]
 	erb :edit
 end
 
 delete '/projects/:id' do # projects#destroy
-
-
+	Project.find(params[:id]).destroy
+	redirect to '/'
 end
 
 
