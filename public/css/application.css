@@ -1,25 +1,58 @@
+
+.navbar {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	background-color: grey;
+	width: 100%;
+	height: 100px;
+}
+/*General Layout CSS*/
 .container {
-  margin: 20px auto;
+  margin: 15px auto;
   width: 85%;
   padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
   text-align: center;
 }
 
-.project_show {
-	background-color: blue;
-	width: 500px;
-	height: 180px;
+
+/*Projects Home Page*/
+
+.header {
+	position: relative;
+	background-color: canvas;
+	height: 20%;
+	vertical-align: center;
+}
+.header h1{
+	text-align: center;
+}
+.home-image{
+	height: 400px;
+	width: 100%;
+	background-color: black;
+}
+.project {
+	height: 200px;
+	background-color: grey;
+	border-color: black;
+	border-style: solid 2px;
 }
 
 .even{
 	float: left;
-	width: 50%;
+	width: 45%;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	/*margin: 10px 10px;*/
+	padding: 10px 10px;
 }
-
 
 .odd{
 	float:right;
-	width: 50%;
-	background-color: green;
+	width: 45%;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	/*margin: 10px 10px;*/
+	padding: 10px 10px;
 }

@@ -1,3 +1,12 @@
+
+<div class="header">
+	<h1>Find amazing projects DBC students have made</h1>
+	<div class="home-image">
+		
+	</div>
+</div>
+
+<div class="container">
 <% @projects.each do |project| %>
 		<% if project.id % 2 == 0 %>
 			<% @side="even" %>
@@ -5,7 +14,7 @@
 			<% @side="odd" %>
 		<% end %>
 
-	<div class="project_show <%= @side %>" id="project_<%= project.id %>">
+	<div class="project <%= @side %>" id="project_<%= project.id %>">
 		<div class="project" id="<%= project.id %>">
 			<h3>Project: <%= project.name %></h3>
 			<p>DescriptioN:<%= project.description %></p>
@@ -16,3 +25,4 @@
 		</div>
 	</div>
 <% end %>
+</div>
