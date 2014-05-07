@@ -22,9 +22,17 @@ get '/projects/:id' do # projects#show
 end
 
 get '/projects/:id/edit' do # projects#edit
-	@project = Project.find params[:id]
+	@project = Project.find(params[:id])
 	erb :edit
 end
+
+put '/projects/:id' do
+	@project = Project.find(params[:project][:id])
+	@project.update_attributes(params[:project])
+	redirect to "projects/#{@project.id}"
+end
+
+
 
 delete '/projects/:id' do # projects#destroy
 	Project.find(params[:id]).destroy

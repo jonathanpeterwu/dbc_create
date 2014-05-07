@@ -1,5 +1,11 @@
 <% @projects.each do |project| %>
-	<div class="project_show">
+		<% if project.id % 2 == 0 %>
+			<% @side="even" %>
+		<% else %>
+			<% @side="odd" %>
+		<% end %>
+
+	<div class="project_show <%= @side %>" id="project_<%= project.id %>">
 		<div class="project" id="<%= project.id %>">
 			<h3>Project: <%= project.name %></h3>
 			<p>DescriptioN:<%= project.description %></p>
