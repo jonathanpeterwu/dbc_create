@@ -1,6 +1,6 @@
 
 <div class="header">
-	<h1>Discover amazing projects made by DBC grads</h1>
+	<h2>Discover amazing projects made by DBC grads</h2>
 	<div class="home-image">
 	</div>
 </div>
@@ -13,11 +13,13 @@
 			<% @side="odd" %>
 		<% end %>
 
-	<div class="project-wrap <%= @side %>" id="project_<%= project.id %>">
-		<img class="image" src="http://i.imgur.com/LAnbqxG.png" alt="<%= project.name %>"/>
-		<div class="project-content">
+	<div class="project-wrap <%= @side %>" id="project_<%= project.id %>" >
+	<!-- http://i.imgur.com/LAnbqxG.png -->
+		<img class="image" src="img/example.png" alt="<%= project.name %>"/>
+		<div class="project-content" >
 			<div class="project" id="<%= project.id %>">
-				<div class="project-name">Project </div><div class="project-title"><%= project.name %></div>
+				<div class="project-name">Project </div>
+				<div class="project-title"><%= project.name %></div>
 		</div>
 		</div>
 	</div>
