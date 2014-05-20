@@ -82,6 +82,38 @@ input{
 	margin: 0 auto;
 }
 
+.project {
+	border-color: black;
+	border-style: solid 2px;
+}
+
+.project-name {
+	display: inline;
+	position: relative;
+	width: 20%;
+	align: left;
+	font-size: 1.3em;
+	padding-bottom: 10px;
+}
+
+.project-name:hover{
+	background-color: #EC5041;
+	opacity: 80%;
+}
+
+
+.project-title{
+	display: inline;
+	positoin: relative;
+	width: 80%;
+	font-size: 1.3em;
+	padding: 10px 0px;
+	padding-right: 60%;
+}
+
+.project-title:hover{
+	background-color: #EC5041;
+}
 /* Projects Header Css*/
 .header {
 	position: relative;
@@ -100,38 +132,15 @@ input{
 	padding-bottom: 5px;
 }
 
-.project {
-	border-color: black;
-	border-style: solid 2px;
+
+/*NEED TO FINISH MEADIA QUERIES*/
+@media (min-width: 875px) and (min-height: 2000px) {
+	.even{
+	  align: left;
+	}
+	.odd{
+	  align: left;
+	  background-color: black;
+	}
+
 }
-
-.project-name {
-	display: inline;
-	position: relative;
-	width: 20%;
-	align: left;
-	font-size: 1.3em;
-	margin-top: 5px;
-	padding: 10px 0px;
-	background-col[pofr: tan;
-}
-
-.project-name:hover{
-	background-color: #EC5041;
-	opacity: 80%;
-}
-
-
-.project-title{
-	display: inline;
-	positoin: relative;
-	width: 80%;
-	font-size: 1.3em;
-	padding: 10px 8px;
-	padding-right: 60%;
-}
-
-.project-title:hover{
-	background-color: #EC5041;
-}
-
