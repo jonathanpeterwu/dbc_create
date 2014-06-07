@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- 
+  <!--
     normalize.css removes cross-browser differences in defaults, e.g.,
     differences in how form elements appear between Firefox and IE
     See: http://necolas.github.com/normalize.css/
@@ -10,10 +10,16 @@
   <!--
     application.css is where you put your styles
   -->
+
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.3.6/slick.css"/>
   <link rel="stylesheet" href="/css/application.css">
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script src="app/public/js/application.js"></script>  
+
+
+<!--   // <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
+  <script src="app/public/js/application.js"></script>
+
+<!--   <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.3.6/slick.min.js"></script> -->
 
 
   <title></title>
@@ -22,6 +28,7 @@
   <div class="navbar">
     DBC Create
   </div>
+
   <%= yield %>
 </body>
 </html>

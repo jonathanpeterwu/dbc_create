@@ -3,7 +3,7 @@ get '/' do
 end
 
 get '/projects' do   #  projects#index
-	@projects = Project.all
+	@projects = Project.all  #
   erb :index
 end
 
