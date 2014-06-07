@@ -1,0 +1,12 @@
+<div class="individualproject">
+	<h1>Project</h1>
+
+	<div class="project" id="<%= @project.id %>">
+		<h3>Project: <%= @project.name %></h3>
+		<p>Description: <%= @project.description %></p>
+		<p>Project Link <a href="<%= @project.production_url %>"></a></p>
+		<p><a href="<%= @project.source_url %>">Github URL</a></p>
+		<p><%= @project.location %></p>
+		<p>Image links here</p>
+	</div>
+</div>
