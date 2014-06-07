@@ -1,4 +1,4 @@
-get '/' do	
+get '/' do
 	redirect to '/projects'
 end
 
@@ -12,6 +12,9 @@ get '/projects/new' do # projects#new
 end
 
 post '/projects' do # projects#create
+	p params
+	Project.create(name: params[name], description: params[description])
+	debugger;
 	project = Project.create(params[:project])
 	redirect to "/projects/#{project.id}"
 end
