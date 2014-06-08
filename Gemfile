@@ -18,6 +18,7 @@ gem 'activerecord'
 
 #face recognition
 
+gem 'pry'
 
 gem 'rake'
 
