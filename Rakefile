@@ -137,3 +137,8 @@ desc "Run the specs"
 RSpec::Core::RakeTask.new(:spec)
 
 task :default  => :spec
+
+task :environment do
+  Sinatra::Application.environment = ENV['RACK_ENV']
+end
+load "pg_search/tasks.rb"

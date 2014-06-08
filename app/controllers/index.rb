@@ -17,6 +17,10 @@ post '/projects' do # projects#create
 	redirect to "/projects/#{project.id}"
 end
 
+post '/projects/search' do 
+	@projects = Project.search_projects(params)
+end
+
 get '/projects/:id' do # projects#show
 	@project = Project.find params[:id]
 	erb :show
@@ -40,4 +44,9 @@ delete '/projects/:id' do # projects#destroy
 	redirect to '/'
 end
 
+
+def results
+    @user_obj_array = User.get_list_of_user_obj(params[:pgsearch])
+    render partial: 'results', locals: { results: @user_obj_array }
+  end
 

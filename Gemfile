@@ -19,6 +19,7 @@ gem 'activerecord'
 #face recognition
 
 gem 'pry'
+gem 'pg_search'
 
 gem 'rake'
 

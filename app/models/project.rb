@@ -1,5 +1,10 @@
 class Project < ActiveRecord::Base
+	include PgSearch
 
+	multisearchable :against => [ :name,
+ 								  :description,
+ 								  :location,
+ 								  :tags ]
 # opts will be a hash: {sort_by: category, value: category value, year: year }.
 # year will probably not be there in some cases..
 # eg, to look up project by the Golden Bears, {sort_by: cohort, value: "Golden Bears", year: 2014}
@@ -14,8 +19,7 @@ class Project < ActiveRecord::Base
 
 		def sort_by_tags(opts)
 			# assumes value is an array of tags, eg ["JavaScript", "single page app"]
-			# 
-			opts[:value].map{ |tag| self.find(tag: tag) }
+			opts[:value].map{ |tag| self.search_projects(tag) }
 		end
 
 		def sort_by_cohort(opts)
@@ -26,13 +30,14 @@ class Project < ActiveRecord::Base
 		def sort_by_year(opts)
 			self.find(year: opts[:year].year)
 		end
+
+		def search_projects(search_term)
+			PgSearch.multisearch(search_term)
+		end
 	end
+
 
 end
 
 # 1. Full text search with pg_search gem
 # 2. Sort by: location, tags, cohort, cohort end date
-
-
-
-
