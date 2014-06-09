@@ -1,7 +1,7 @@
 class Project < ActiveRecord::Base
-	include PgSearch
+  include PgSearch
 
-	multisearchable :against => [ :name,
+ multisearchable :against => [ :name,
  								  :description,
  								  :location,
  								  :tags ]
@@ -34,6 +34,7 @@ class Project < ActiveRecord::Base
 		def search_projects(search_term)
 			PgSearch.multisearch(search_term)
 		end
+
 	end
 
 
