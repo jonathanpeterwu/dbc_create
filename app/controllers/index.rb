@@ -45,8 +45,3 @@ delete '/projects/:id' do # projects#destroy
 end
 
 
-def results
-    @user_obj_array = User.get_list_of_user_obj(params[:pgsearch])
-    render partial: 'results', locals: { results: @user_obj_array }
-  end
-
