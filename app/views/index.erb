@@ -11,12 +11,12 @@
 		<% if project.id % 2 == 0 %>
 			<% @side="even" %>
 		<% else %>
-			<% @side="odd" %>
+			<% @side="even" %>
 		<% end %>
 
 	<div class="project-wrap <%= @side %>" id="project_<%= project.id %>" >
 	<!-- http://i.imgur.com/LAnbqxG.png -->
-		<img class="image" src="img/example.png" width="100%" alt="<%= project.name %>"/>
+		<img class="image" src="img/example.png" alt="<%= project.name %>"/>
 		<div class="project-content" >
 			<div class="project" id="<%= project.id %>">
 				<div class="project-name">Project </div>
