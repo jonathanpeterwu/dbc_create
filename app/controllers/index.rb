@@ -2,9 +2,12 @@ get '/' do
 	redirect to '/projects'
 end
 
-get '/projects' do   #  projects#index
-	@projects = Project.sort_by(params)
-	# @projects = Project.all
+get '/projects' do
+	if params[:sort]
+		@projects = Project.sort_by(params)
+	else
+		@projects = Project.all
+	end
   erb :index
 end
 
@@ -17,7 +20,7 @@ post '/projects' do # projects#create
 	redirect to "/projects/#{project.id}"
 end
 
-post '/projects/search' do 
+post '/projects/search' do
 	@projects = Project.search_projects(params)
 end
 
