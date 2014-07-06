@@ -16,11 +16,10 @@
 
 	<div class="project-wrap <%= @side %>" id="project_<%= project.id %>" >
 	<!-- http://i.imgur.com/LAnbqxG.png -->
-		<img class="image" src="img/example.png" alt="<%= project.name %>"/>
+		<a href="/projects/<%= project.id %>"><img class="image" src="<%= project.image_url %>" alt="<%= project.name %>"/></a>
 		<div class="project-content" >
 			<div class="project" id="<%= project.id %>">
-				<div class="project-name">Project </div>
-				<div class="project-title"><%= project.name %></div>
+				<a class="link" href="/projects/<%= project.id %>"><div class="project-title"><%= project.name %></div></a>
 		</div>
 		</div>
 	</div>
