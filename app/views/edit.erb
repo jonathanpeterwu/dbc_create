@@ -1,21 +1,21 @@
 <% if @project %>
-<form action="/projects/<%= @project.id %>" method="POST">
+<form class="project-edit" action="/projects/<%= @project.id %>" method="POST">
 	<label>Name:</label>
 	<input type="hidden" name="_method" value="PUT">
-	<input type="hidden" name="project[id]" value="<%= @project.id %>"/>
-	<input type="text" name="project[name]" value="<%= @project.name %>"/>
+	<input class="input-field" type="hidden" name="project[id]" value="<%= @project.id %>"/>
+	<input class="input-field" type="text" name="project[name]" value="<%= @project.name %>"/>
 	<label>Description:</label>
-	<input type="text" name="project[description]" value="<%= @project.description %>"/>
+	<input class="input-field" type="text" name="project[description]" value="<%= @project.description %>"/>
 	<label>Production Url:</label>
-	<input type="text" name="project[production_url]" value="<%= @project.production_url%>" />
+	<input class="input-field" type="text" name="project[production_url]" value="<%= @project.production_url%>" />
 	<label>Source Url:</label>
-	<input type="text" name="project[source_url]" value="<%= @project.source_url %>"/>
+	<input class="input-field" type="text" name="project[source_url]" value="<%= @project.source_url %>"/>
 	<label>Location:</label>
-	<input type="text" name="project[location]" value="<%= @project.location %>"/>
+	<input class="input-field" type="text" name="project[location]" value="<%= @project.location %>"/>
 	<label>Image Url:</label>
-	<input type="text" name="project[image_url]" value="<%= @project.image_url %>"/>
+	<input class="input-field" type="text" name="project[image_url]" value="<%= @project.image_url %>"/>
 	<input type="submit"/>
-</form>	
+</form>
 <% else %>
 	<h1> You have not created this project </h1>
 <% end %>

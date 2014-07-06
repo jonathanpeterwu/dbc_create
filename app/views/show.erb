@@ -2,11 +2,11 @@
 	<h1>Project</h1>
 
 	<div class="project" id="<%= @project.id %>">
-		<h3>Project: <%= @project.name %></h3>
-		<p>Description: <%= @project.description %></p>
-		<p><a href="<%= @project.production_url %>">Project Link </a></p>
+		<h3><%= @project.name %></h3>
+		<p><%= @project.description %></p>
+		<p><a href="http://<%= @project.production_url %>">Project Link </a></p>
 		<p><a href="<%= @project.source_url %>">Github URL</a></p>
 		<p><%= @project.location %></p>
-		<p><img src="<%= @project.image_url %>" alt="The owner of this project neglected to upload an image"></p>
+		<p><img class="show-image" src="<%= @project.image_url %>" alt="The owner of this project neglected to upload an image"></p>
 	</div>
 </div>
