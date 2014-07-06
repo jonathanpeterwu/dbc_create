@@ -2,6 +2,8 @@ class Project < ActiveRecord::Base
 
   include PgSearch
 
+  validates :name, :description, :production_url, :source_url, :location, :image_url, presence: true
+
  multisearchable :against => [ :name,
  								  :description,
  								  :location,
