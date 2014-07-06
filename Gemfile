@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
-ruby '2.1.1'
+ruby '2.1.2'
 
 # PostgreSQL driver
 gem 'pg'
-gem 'debugger'
+# gem 'debugger'
 
 # Sinatra driver
 gem 'sinatra'

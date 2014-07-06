@@ -11,11 +11,11 @@ get '/projects' do
   erb :index
 end
 
-get '/projects/new' do # projects#new
+get '/projects/new' do
 	erb :new
 end
 
-post '/projects' do # projects#create
+post '/projects' do
 	project = Project.create(params[:project])
 	redirect to "/projects/#{project.id}"
 end
@@ -24,26 +24,26 @@ post '/projects/search' do
 	@projects = Project.search_projects(params)
 end
 
-get '/projects/:id' do # projects#show
+get '/projects/:id' do
 	@project = Project.find params[:id]
 	erb :show
 end
 
-get '/projects/:id/edit' do # projects#edit
+get '/projects/:id/edit' do
 	@project = Project.find(params[:id])
 	erb :edit
 end
 
 put '/projects/:id' do
-	@project = Project.find(params[:project][:id])
-	@project.update_attributes(params[:project])
+	project = Project.find(params[:project][:id])
+	project.update_attributes(params[:project])
 	redirect to "projects/#{@project.id}"
 end
 
-
-
-delete '/projects/:id' do # projects#destroy
-	Project.find(params[:id]).destroy
+delete '/projects/:id' do
+	if logged_in? && admin_priviledge? == true
+		project = Project.find(params[:id])
+	end
 	redirect to '/'
 end
 

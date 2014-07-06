@@ -8,6 +8,7 @@ class CreateProjects < ActiveRecord::Migration
   		t.string :location
   		t.string :tags
   		t.string :image_url
+      t.string :team_member
   	end
   end
 end
