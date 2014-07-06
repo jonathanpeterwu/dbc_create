@@ -4,9 +4,9 @@
 	<div class="project" id="<%= @project.id %>">
 		<h3>Project: <%= @project.name %></h3>
 		<p>Description: <%= @project.description %></p>
-		<p>Project Link <a href="<%= @project.production_url %>"></a></p>
+		<p><a href="<%= @project.production_url %>">Project Link </a></p>
 		<p><a href="<%= @project.source_url %>">Github URL</a></p>
 		<p><%= @project.location %></p>
-		<p>Image links here</p>
+		<p><img src="<%= @project.image_url %>" alt="The owner of this project neglected to upload an image"></p>
 	</div>
 </div>

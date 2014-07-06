@@ -15,9 +15,14 @@ get '/projects/new' do
 	erb :new
 end
 
-post '/projects' do
-	project = Project.create(params[:project])
-	redirect to "/projects/#{project.id}"
+post '/projects' do # projects#create
+	project = Project.new(params[:project])
+	project.validate_links
+	if project.save
+		redirect to "/projects/#{project.id}"
+	else
+		erb :new
+	end
 end
 
 post '/projects/search' do

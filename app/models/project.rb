@@ -1,5 +1,8 @@
 class Project < ActiveRecord::Base
+
   include PgSearch
+
+  validates :name, :description, :production_url, :source_url, :location, :image_url, presence: true
 
  multisearchable :against => [ :name,
  								  :description,
@@ -54,6 +57,14 @@ class Project < ActiveRecord::Base
 
 	end
 
+  def validate_links
+    valid_links = [self.production_url, self.source_url].map do |link|
+       unless link.match(/^https?:\/\//)
+        "https://" + link
+      end
+    end
+    self.production_url, self.source_url = valid_links[0], valid_links[1]
+  end
 
 end
 
