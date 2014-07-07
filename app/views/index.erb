@@ -4,24 +4,25 @@
 	<div class="home-image">
 	<img src="http://community.futureshop.ca/t5/image/serverpage/image-id/29931iCF96B89F4983CC83/image-size/original?v=mpbl-1&px=-1" width='100%'></img>
 	</div>
+
+	<div class="sorting-div">
+	  <p>Sort By <p>
+ 		<button class="sort-button"><a href="/projects?sort=chicago" name="sort[location][chicago]">Chicago</a></button>
+		<button class="sort-button"><a href="/projects?sort=sanfrancisco" name="sort[location][sanfrancisco]">San Francisco</a></button>
+		<button class="sort-button"><a href="/projects?sort=newyork" name="sort[location][newyork]">New York</a></button>
+	</div>
 </div>
 
 <div class="container">
-<% @projects.each do |project| %>
-		<% if project.id % 2 == 0 %>
-			<% @side="even" %>
-		<% else %>
-			<% @side="even" %>
-		<% end %>
-
-	<div class="project-wrap <%= @side %>" id="project_<%= project.id %>" >
-	<!-- http://i.imgur.com/LAnbqxG.png -->
-		<a href="/projects/<%= project.id %>"><img class="image" src="<%= project.image_url %>" alt="<%= project.name %>"/></a>
-		<div class="project-content" >
-			<div class="project" id="<%= project.id %>">
-				<a class="link" href="/projects/<%= project.id %>"><div class="project-title"><%= project.name %></div></a>
+	<% @projects.each do |project| %>
+				<% @side="even" %>
+		<div class="project-wrap <%= @side %>" id="project_<%= project.id %>" >
+			<a href="/projects/<%= project.id %>"><img class="image" src="<%= project.image_url %>" alt="<%= project.name %>"/></a>
+			<div class="project-content" >
+				<div class="project" id="<%= project.id %>">
+					<a class="link" href="/projects/<%= project.id %>"><div class="project-title"><%= project.name %></div></a>
+			</div>
+			</div>
 		</div>
-		</div>
-	</div>
-<% end %>
+	<% end %>
 </div>

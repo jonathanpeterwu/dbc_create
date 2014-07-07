@@ -24,6 +24,15 @@ class Project < ActiveRecord::Base
 				self.sort_by_cohort(opts)
 			elsif opts[:sort] == "year"
 				self.sort_by_year(opts)
+			elsif opts[:sort] == "chicago"
+				projects = Project.where(location: "Chicago\n")
+				p projects
+			elsif opts[:sort] == "sanfrancisco"
+				projects = Project.where(location: "San Francisco\n")
+				p projects
+			elsif opts[:sort] == "newyork"
+				projects = Project.where(location: "New York\n")
+				p projects
 			else
 				projects = Project.all
 			end
