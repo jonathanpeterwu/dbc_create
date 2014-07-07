@@ -6,7 +6,7 @@
   text-align: center;
 }*/
 .createprojects {
-	margin-top: 50px;
+	margin-top: 40px;
 	margin-left: 15%;
 	margin-bottom: 5%;
 	padding-top: 10%;
@@ -17,9 +17,19 @@
 	background-color: grey;
 }
 
-.input-field {
-	float: left;
+input {
+	width: 300px;
+	height: 30px;
+
 }
+
+.input-fields {
+	width: 400px;
+	height: 400px;
+	position: relative;
+	margin-left: 25%;
+}
+
 .link {
 	text-decoration: none;
 	color: black;
@@ -28,6 +38,22 @@
 .link-nav{
 	text-decoration: none;
 	color: white;
+}
+
+.sorting-div {
+	position: relative;
+	margin-top: 2%;
+	/*margin-left: %;*/
+}
+
+.sorting-div p {
+	text-align: center;
+	color: black;
+}
+
+.sort-button a {
+	text-decoration: none;
+	color: black;
 }
 
 .upload {
@@ -157,7 +183,7 @@ input{
 	width: 100%;
 	color: white;
 	background-color: tan;
-	height: 450px;
+	height: 500px;
 	padding: 30px 0px;
 	margin: 0 auto;
 	margin-bottom: 50px;
