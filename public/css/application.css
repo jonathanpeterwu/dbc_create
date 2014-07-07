@@ -30,6 +30,12 @@ input {
 	margin-left: 25%;
 }
 
+
+#upload-project {
+	font-size: 0.7em;
+	color: grey;
+}
+
 .link {
 	text-decoration: none;
 	color: black;
@@ -43,7 +49,6 @@ input {
 .sorting-div {
 	position: relative;
 	margin-top: 2%;
-	/*margin-left: %;*/
 }
 
 .sorting-div p {
@@ -63,15 +68,38 @@ input {
 }
 
 .individualproject{
-	padding-top: 20px;
+	padding-top: 5%;
+	position: relative;
+	margin: 0 auto ;
 	text-align: center;
-	margin-top: 50px;
-	margin-left: 15%;
-	margin-bottom: 5%;
-	width: 900px;
+	width: 40%;
+	height: 250px;
+	background-color:rgba(255,255,255,0.5);
+	color: black;
+	margin-top: 4%;
+	margin-bottom: 4%;
+}
+
+.project-location-image {
+	width: 100%;
+	height: 50%;
+}
+
+.location-image {
+	position: absolute;
+	width: 100%;
+	left: 0px;
+	top: 40px;
+	margin: 0 auto;
+}
+
+.project-image {
+	position: relative;
+	padding-top: 80px;
+	margin: 0 auto;
+	background-color: #32393F;
+	text-align: center;
 	height: 600px;
-	background-color: grey
-	;
 }
 input{
 	border-style: none;
@@ -102,38 +130,42 @@ input{
 }*/
 
 .image {
-	width: 100%;
-	height: 100%;
+	width: 640px;
+	height: 360px;
 	margin: auto 0px;
 }
 
 .show-image {
-	width: 500px;
-	height: 300px;
+	width: 853px;
+	height: 480px;
 }
 
 .home-image{
 	align: center;
 	vertical-align: middle;
-	width: 650px;
-	height: 350px;
-	background-color: black;
+	width: 853px;
+	height: 480px;
+	/*background-color: black;*/
 	margin: 0 auto;
 }
 
-
-
 .navbar {
 	position: relative;
-	font-size: 2.2em;
+	font-size: 1.2em;
 	left: 0px;
 	top: 0px;
 	width: 100%;
-	height: 50px;
+	height: 40px;
 	padding-top: 10px;
 	color: white;
 	background-color: black;
 	margin: 0 auto;
+}
+
+.buttons {
+	position: relative;
+	margin: 0 auto;
+	width: 50%;
 }
 
 .project {
@@ -152,10 +184,10 @@ input{
 	height: 30px;
 }
 
-.project-name:hover{
+/*.project-name:hover{
 	background-color: #EC5041;
 	opacity: 80%;
-}
+}*/
 
 .project-content{
 	width: 50%;
@@ -170,12 +202,9 @@ input{
 	padding-top: 10px;
 	padding-bottom: 10px;
 	padding-left: 10px;
-	padding-right: 100%;
 }
 
-.project-title:hover{
-	background-color: #EC5041;
-}
+
 /* Projects Header Css*/
 .header {
 	position: relative;
@@ -183,7 +212,7 @@ input{
 	width: 100%;
 	color: white;
 	background-color: tan;
-	height: 500px;
+	height: 650px;
 	padding: 30px 0px;
 	margin: 0 auto;
 	margin-bottom: 50px;
@@ -194,8 +223,7 @@ input{
 	padding-bottom: 5px;
 }
 
-
-/*NEED TO FINISH MEADIA QUERIES*/
+/*NEED TO FINISH MEDIA QUERIES*/
 @media (min-width: 875px) and (min-height: 2000px) {
 	.even{
 	  align: left;
