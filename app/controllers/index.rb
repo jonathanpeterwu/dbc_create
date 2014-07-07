@@ -15,7 +15,7 @@ get '/projects/new' do
 	erb :new
 end
 
-post '/projects' do # projects#create
+post '/projects' do
 	project = Project.new(params[:project])
 	project.validate_links
 	if project.save
