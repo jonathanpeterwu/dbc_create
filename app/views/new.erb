@@ -1,20 +1,24 @@
 
-<form class="createprojects" action="/projects" method="post">
-	<div class="input-fields">
+<form class="dbc-form stacked" action="/projects" method="post">
 		All fields are required.<br>
 		<label>Name:</label>
-		<input type="text" name="project[name]"/><br>
+		<input type="text" name="project[name]"/>
 		<label>Description:</label>
-		<input type="text" name="project[description]"/><br>
+		<textarea name="project[description]"></textarea>
 		<label>Website:</label>
-		<input type="text" name="project[production_url]"/><br>
+		<input type="text" name="project[production_url]"/>
 		<label>Github:</label>
-		<input type="text" name="project[source_url]"/><br>
-		<!-- DROP DOWN MENU -->
+		<input type="text" name="project[source_url]"/>
 		<label>Location:</label>
-		<input type="text" name="project[location]"/><br>
+		<select name="project[location">
+      <option></option>
+      <option>San Francisco</option>
+      <option>Chicago</option>
+      <option>New York</option>
+    </select>
 		<label>Image Url:</label>
-		<input type="text" name="project[image_url]"/><br>
-		<input type="submit"/>
-	</div>
+		<input type="text" name="project[image_url]"/>
+    <button type="submit" class="dbc-button dbc-button-primary">Submit</button>
 </form>
+
+
