@@ -11,7 +11,7 @@ AppRoot = File.expand_path(File.dirname(__FILE__))
 f = File.open(File.join(AppRoot, "seed_data.csv"), "r")
 f.each_line do |line|
 	project = line.split(',')
-	Project.create(name: project[1], description: project[6], source_url: project[4], production_url: project[3], location: project[-1], tags: "final_project", image_url: project[5], team_member: project[-2])
+	Project.create(name: project[1], description: project[6], source_url: project[4], production_url: project[3], location: project[-1].chomp, tags: "final_project", image_url: project[5], team_member: project[-2])
 	p project
 end
 f.close
