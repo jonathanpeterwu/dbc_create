@@ -25,13 +25,13 @@ class Project < ActiveRecord::Base
 			elsif opts[:sort] == "year"
 				self.sort_by_year(opts)
 			elsif opts[:sort] == "chicago"
-				projects = Project.where(location: "Chicago\n")
+				projects = Project.where(location: "Chicago")
 				p projects
 			elsif opts[:sort] == "sanfrancisco"
-				projects = Project.where(location: "San Francisco\n")
+				projects = Project.where(location: "San Francisco")
 				p projects
 			elsif opts[:sort] == "newyork"
-				projects = Project.where(location: "New York\n")
+				projects = Project.where(location: "New York")
 				p projects
 			else
 				projects = Project.all
