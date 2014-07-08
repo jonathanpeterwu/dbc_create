@@ -17,11 +17,9 @@
 	background-color: grey;
 }
 
-.input-fields {
-	width: 400px;
-	height: 400px;
-	position: relative;
-	margin-left: 25%;
+.form-container {
+	width: 500px;
+	margin-left: 10%;
 }
 
 .link {

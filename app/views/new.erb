@@ -1,24 +1,25 @@
 
-<form class="dbc-form stacked" action="/projects" method="post">
-		All fields are required.<br>
-		<label>Name:</label>
-		<input type="text" name="project[name]"/>
-		<label>Description:</label>
-		<textarea name="project[description]"></textarea>
-		<label>Website:</label>
-		<input type="text" name="project[production_url]"/>
-		<label>Github:</label>
-		<input type="text" name="project[source_url]"/>
-		<label>Location:</label>
-		<select name="project[location">
-      <option></option>
-      <option>San Francisco</option>
-      <option>Chicago</option>
-      <option>New York</option>
-    </select>
-		<label>Image Url:</label>
-		<input type="text" name="project[image_url]"/>
-    <button type="submit" class="dbc-button dbc-button-primary">Submit</button>
-</form>
-
+<div class="form-container">
+	<form class="dbc-form stacked" action="/projects" method="post">
+			All fields are required.<br>
+			<label>Name:</label>
+			<input type="text" name="project[name]"/>
+			<label>Description:</label>
+			<textarea name="project[description]"></textarea>
+			<label>Website:</label>
+			<input type="text" name="project[production_url]"/>
+			<label>Github:</label>
+			<input type="text" name="project[source_url]"/>
+			<label>Location:</label>
+			<select name="project[location">
+	      <option></option>
+	      <option>San Francisco</option>
+	      <option>Chicago</option>
+	      <option>New York</option>
+	    </select>
+			<label>Image Url:</label>
+			<input type="text" name="project[image_url]"/>
+	    <button type="submit" class="dbc-button dbc-button-primary">Submit</button>
+	</form>
+</div>
 
