@@ -120,12 +120,12 @@ input{
 	position: relative;
 	float: left;
 	text-align: center;
-	width: 28%;
-	height: 300px;
+	width: 20%;
+	height: 165px;
 	margin-left: 2.5%;
 	margin-right: 2.5%;
 	margin-bottom: 35px;
-	padding-top: 50px;
+	padding-top: 26px;
 	padding-bottom: 0px;
 	background-color: #32393F;
 }
