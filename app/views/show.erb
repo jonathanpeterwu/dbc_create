@@ -16,11 +16,12 @@
 		<h3>Project: <%= @project.name %></h3>
 		<p><%= @project.description %></p>
 		<p><a href="<%= @project.production_url %>">Project Link </a>, <a href="<%= @project.source_url %>">Github URL</a></p>
+		<!-- <img src="http://imgur.com/vEfvZNA.png"/> -->
 	</div>
 </div>
 <div class="project-image">
 
-		<p><img class="show-image" src="<%= @project.image_url %>" alt="The owner of this project neglected to upload an image"></p>
+		<p><a href="<%= @project.production_url %>"><img class="show-image" src="<%= @project.image_url %>" alt="The owner of this project neglected to upload an image"></img></a></p>
 
 
 </div>
