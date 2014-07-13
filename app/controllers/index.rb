@@ -4,9 +4,9 @@ end
 
 get '/projects' do
 	if params[:sort]
-		@projects = Project.sort_by(params)
+		@projects = Project.sort_by(params).shuffle
 	else
-		@projects = Project.all
+		@projects = Project.all.shuffle
 	end
   erb :index
 end
@@ -26,7 +26,7 @@ post '/projects' do
 end
 
 post '/projects/search' do
-	@projects = Project.search_projects(params)
+	@projects = Project.search_projects(params).shuffle
 end
 
 get '/projects/:id' do
