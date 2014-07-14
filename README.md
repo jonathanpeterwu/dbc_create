@@ -3,4 +3,4 @@
 
 
 ## You can see the live app here
-![link](http://madeatdbc.herokuapp.com/projects)
+[link](http://madeatdbc.herokuapp.com/projects)
