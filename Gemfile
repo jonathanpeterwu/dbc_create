@@ -3,8 +3,6 @@ source 'https://rubygems.org'
 
 # PostgreSQL driver
 gem 'pg'
-gem 'pry'
-# gem 'debugger'
 
 # Sinatra driver
 gem 'sinatra'
