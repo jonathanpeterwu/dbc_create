@@ -46,12 +46,12 @@
 	color: white;
 }
 
-.sorting-div {
+.sorting-div, .search-div {
 	position: relative;
 	margin-top: 2%;
 }
 
-.sorting-div p {
+.sorting-div p, .search-div {
 	text-align: center;
 	color: white;
 }

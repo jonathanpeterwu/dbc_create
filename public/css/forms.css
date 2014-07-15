@@ -93,3 +93,7 @@ a.dbc-button-selected {
     background-color: #4ECDC4;
     color: #fff;
 }
+
+.inline {
+    display: inline;
+}
