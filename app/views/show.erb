@@ -19,9 +19,17 @@
 		<!-- <img src="http://imgur.com/vEfvZNA.png"/> -->
 	</div>
 </div>
+
 <div class="project-image">
-
+		<% if @project.answer1 %>
+			<div><p>Question: What technologies did your team use?</p></div>
+			<p><%=  @project.answer1 %></p>
+			<div><p>Question: What was your biggest technical challenge?</p></div>
+			<p><%=  @project.answer2 %></p>
+			<div><p>Question: If you could do it over again, what would you change?</p> </div>
+			<p><%=  @project.answer3 %></p>
+			<div><p>Question: What advice do you have for people about to begin their final projects? </p></div>
+			<p><%=  @project.answer4 %></p>
+		<% end %>
 		<p><a href="<%= @project.production_url %>"><img class="show-image" src="<%= @project.image_url %>" alt="The owner of this project neglected to upload an image"></img></a></p>
-
-
 </div>
