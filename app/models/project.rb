@@ -14,9 +14,9 @@ class Project < ActiveRecord::Base
 # eg, to look up project by the Golden Bears, {sort_by: cohort, value: "Golden Bears", year: 2014}
 	class << self
 		def sort_by(opts)
-			if opts[:sort] == "old"
+			if opts[:sort][:old]# == "old"
 				projects = Project.all.reverse
-			elsif opts[:sort] == "location"
+			elsif opts[:sort][:location] #== "location"
 				self.sort_by_location(opts)
 			elsif opts[:sort] == "tags"
 				self.sort_by_tags(opts)
@@ -43,7 +43,8 @@ class Project < ActiveRecord::Base
 		# end
 
 		def sort_by_location(opts)
-			self.find(location: opts[:location])
+			Project.where(location: opts[:sort][:location])
+			# self.find(location: opts[:location])
 		end
 
 		def sort_by_tags(opts)
@@ -60,9 +61,9 @@ class Project < ActiveRecord::Base
 			self.find(year: opts[:year].year)
 		end
 
-		# def search_projects(search_term)
-		# 	PgSearch.multisearch(search_term)
-		# end
+		def search_projects(search_term)
+			PgSearch.multisearch(search_term).map { |result| Project.find(result.searchable_id)  }
+		end
 
 	end
 
