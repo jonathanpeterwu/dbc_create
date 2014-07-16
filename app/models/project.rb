@@ -79,7 +79,7 @@ class Project < ActiveRecord::Base
 
   def validate_img_url
   	unless self.image_url.match(/^.*\.jpg|^.*\.png/)
-  		self.image_url + ".png"
+  		self.image_url += ".png"
   	else
   		self.image_url
   	end
