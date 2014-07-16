@@ -67,14 +67,14 @@ class Project < ActiveRecord::Base
 	end
 
   def validate_links
-    valid_links = [self.production_url, self.source_url].map do |link|
+    valid_links = [self.production_url, self.source_url, self.image_url].map do |link|
       unless link.match(/^https?:\/\//)
         "https://" + link
       else
       	link
       end
     end
-    self.production_url, self.source_url = valid_links[0], valid_links[1]
+    self.production_url, self.source_url, self.image_url= valid_links[0], valid_links[1], valid_links[2]
   end
 
 end
