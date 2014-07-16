@@ -23,7 +23,7 @@ end
 post '/projects' do
 	project = Project.new(params[:project])
 	project.validate_links
-
+	project.validate_img_url
 	if project.save
 		redirect "/projects/#{project.id}"
 	else
@@ -34,8 +34,6 @@ end
 post '/projects/search' do
 	@projects = Project.search_projects(params).shuffle
 end
-
-
 
 get '/projects/:id/edit' do
 	@project = Project.find(params[:id])

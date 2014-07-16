@@ -77,6 +77,14 @@ class Project < ActiveRecord::Base
     self.production_url, self.source_url, self.image_url= valid_links[0], valid_links[1], valid_links[2]
   end
 
+  def validate_img_url
+  	unless self.image_url.match(/^jpg|^png/)
+  		self.image_url + ".png"
+  	else
+  		self.image_url
+  	end
+  end
+
 end
 
 # 1. Full text search with pg_search gem
