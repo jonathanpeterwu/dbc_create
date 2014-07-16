@@ -83,6 +83,7 @@ class Project < ActiveRecord::Base
   	else
   		self.image_url
   	end
+  	self.image_url
   end
 
 end
