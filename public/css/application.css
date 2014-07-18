@@ -1,10 +1,4 @@
 /*General Layout CSS*/
-/*.container {
-  margin: 15px auto;
-  width: 100%;
-  padding: 0px 20px 20px 20px;
-  text-align: center;
-}*/
 
 .container {
 	background-color: #32393F;
@@ -45,7 +39,7 @@
 	text-decoration: none;
 	color: white;
 }
-
+/*=============SORTING BUTTONS===================*/
 .sorting-div {
 	position: relative;
 	margin-top: 2%;
@@ -56,7 +50,6 @@
 	color: white;
 }
 
-
 .sort-button {
 	background-color: #32393F;
 	border: none;
@@ -65,13 +58,18 @@
 	height: 30px;
 }
 
-
-
-
 .sort-button a {
 	text-decoration: none;
 	color: white;
 }
+/*==========END===================*/
+
+
+.question-responses {
+	background-color: #32393F;
+	text-align: center;
+}
+
 
 .upload {
 	text-align: right;
@@ -80,16 +78,15 @@
 }
 
 .individualproject{
-	padding-top: 5%;
 	position: relative;
-	margin: 0 auto ;
+	float: left;
 	text-align: center;
-	width: 40%;
-	height: 250px;
 	background-color:rgba(255,255,255,0.7);
 	color: black;
-	margin-top: 4%;
-	margin-bottom: 4%;
+	width: 320px;
+	height: 360px;
+	padding-top: 70px;
+	margin-left: 25px;
 }
 
 .location-title {
@@ -99,24 +96,26 @@
 }
 .project-location-image {
 	width: 100%;
-	height: 50%;
+	height: 100%;
 }
 
 .location-image {
 	position: absolute;
 	width: 100%;
+	height: 500px;
 	left: 0px;
-	top: 40px;
 	margin: 0 auto;
 }
 
 .project-image {
 	position: relative;
 	padding-top: 80px;
+	padding-bottom: 80px;
 	margin: 0 auto;
 	background-color: #32393F;
 	text-align: center;
-	height: 600px;
+	height: 430px;
+	top: 400px;
 }
 input{
 	border-style: none;
@@ -147,8 +146,8 @@ input{
 }
 
 .show-image {
-	width: 853px;
-	height: 480px;
+	width: 877px;
+	height: 430px;
 }
 
 .home-image{
