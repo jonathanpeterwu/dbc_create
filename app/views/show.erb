@@ -11,17 +11,33 @@
 		<% end %>
 </div>
 
-<div class="individualproject">
-	<div class="project" id="<%= @project.id %>">
-		<h3>Project: <%= @project.name %></h3>
-		<p><%= @project.description %></p>
-		<p><a href="<%= @project.production_url %>">Project Link </a>, <a href="<%= @project.source_url %>">Github URL</a></p>
-		<!-- <img src="http://imgur.com/vEfvZNA.png"/> -->
-	</div>
-</div>
+
 <div class="project-image">
 
-		<p><a href="<%= @project.production_url %>"><img class="show-image" src="<%= @project.image_url %>" alt="The owner of this project neglected to upload an image"></img></a></p>
+			<div class="individualproject" id="<%= @project.id %>">
+						<h3>Project: <%= @project.name %></h3>
+						<p><%= @project.description %></p>
+						<p><a href="<%= @project.production_url %>">Project Link </a>, <a href="<%= @project.source_url %>">Github URL</a></p>
+			</div>
+
+			<% if @project.image_url  %>
+			<a href="<%= @project.production_url %>"><img src="<%= @project.image_url %>" class="show-image" alt="The owner of this project neglected to upload an image"/></a>
+			<% end %>
 
 
+
+
+</div>
+
+<div class="question-responses">
+			<% if @project.answer1 %>
+			<div><p>Question: What technologies did your team use?</p></div>
+			<p><%=  @project.answer1 %></p>
+			<div><p>Question: What was your biggest technical challenge?</p></div>
+			<p><%=  @project.answer2 %></p>
+			<div><p>Question: If you could do it over again, what would you change?</p> </div>
+			<p><%=  @project.answer3 %></p>
+			<div><p>Question: What advice do you have for people about to begin their final projects? </p></div>
+			<p><%=  @project.answer4 %></p>
+			<% end %>
 </div>

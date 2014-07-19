@@ -17,11 +17,17 @@ get '/projects/new' do
 	erb :new
 end
 
+get '/projects/:id' do
+	@project = Project.find params[:id]
+	erb :show
+end
+
 post '/projects' do
 	project = Project.new(params[:project])
 	project.validate_links
+	project.validate_img_url
 	if project.save
-		redirect to "/projects/#{project.id}"
+		redirect "/projects/#{project.id}"
 	else
 		erb :new
 	end
@@ -40,14 +46,14 @@ end
 put '/projects/:id' do
 	project = Project.find(params[:project][:id])
 	project.update_attributes(params[:project])
-	redirect to "projects/#{@project.id}"
+	redirect "projects/#{@project.id}"
 end
 
 delete '/projects/:id' do
 	if logged_in? && admin_priviledge? == true
 		project = Project.find(params[:id])
 	end
-	redirect to '/'
+	redirect '/'
 end
 
 
