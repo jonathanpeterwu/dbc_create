@@ -10,31 +10,6 @@ class Project < ActiveRecord::Base
  								  :tags ]
 
 	class << self
-		# def sort_by(opts)
-		# 	if opts[:sort][:old]
-		# 		projects = Project.all.reverse
-		# 	elsif opts[:sort][:location]
-		# 		self.sort_by_location(opts)
-		# 	elsif opts[:sort] == "tags"
-		# 		self.sort_by_tags(opts)
-		# 	elsif opts[:sort] == "cohort"
-		# 		self.sort_by_cohort(opts)
-		# 	elsif opts[:sort] == "year"
-		# 		self.sort_by_year(opts)
-		# 	elsif opts[:sort] == "chicago"
-		# 		projects = Project.where(location: "Chicago")
-		# 		p projects
-		# 	elsif opts[:sort] == "sanfrancisco"
-		# 		projects = Project.where(location: "San Francisco")
-		# 		p projects
-		# 	elsif opts[:sort] == "newyork"
-		# 		projects = Project.where(location: "New York")
-		# 		p projects
-		# 	else
-		# 		projects = Project.all
-		# 	end
-		# end
-
 		# Using buttons for our sorts, params comes in like so:
 		# opts = {"sort" => {"location"=>"San Francisco"}}
 		def sort_by(opts)
