@@ -2,67 +2,34 @@ class Project < ActiveRecord::Base
 
   include PgSearch
 
-  validates :name, :description, :production_url, :source_url, :location, :image_url, presence: true
+ validates :name, :description, :production_url, :source_url, :location, :image_url, presence: true
 
  multisearchable :against => [ :name,
- 								  :description,
+ 							  	  :description,
  								  :location,
  								  :tags ]
 
-# opts will be a hash: {sort_by: category, value: category value, year: year }.
-# year will probably not be there in some cases..
-# eg, to look up project by the Golden Bears, {sort_by: cohort, value: "Golden Bears", year: 2014}
 	class << self
+		# Using buttons for our sorts, params comes in like so:
+		# opts = {"sort" => {"location"=>"San Francisco"}}
 		def sort_by(opts)
-			if opts[:sort] == "old"
-				projects = Project.all.reverse
-			elsif opts[:sort] == "location"
-				self.sort_by_location(opts)
-			elsif opts[:sort] == "tags"
-				self.sort_by_tags(opts)
-			elsif opts[:sort] == "cohort"
-				self.sort_by_cohort(opts)
-			elsif opts[:sort] == "year"
-				self.sort_by_year(opts)
-			elsif opts[:sort] == "chicago"
-				projects = Project.where(location: "Chicago")
-				p projects
-			elsif opts[:sort] == "sanfrancisco"
-				projects = Project.where(location: "San Francisco")
-				p projects
-			elsif opts[:sort] == "newyork"
-				projects = Project.where(location: "New York")
-				p projects
-			else
-				projects = Project.all
-			end
+			opts = opts["sort"]
+			key = opts.keys[0]
+			self.send("sort_by_#{key}",opts)
+			# Project.where(opts[:sort].to_sym => opts[:value])
 		end
-
-		# def sort_by(opts)
-		# 	self.send("sort_by_#{opts[:sort_by]}",opts)
-		# end
 
 		def sort_by_location(opts)
-			self.find(location: opts[:location])
-		end
-
-		def sort_by_tags(opts)
-			# assumes value is an array of tags, eg ["JavaScript", "single page app"]
-			opts[:value].map{ |tag| self.search_projects(tag) }
+			self.where(opts)
 		end
 
 		def sort_by_cohort(opts)
-			result = self.where(opts[:value])
-			result = result.sort_by_year(opts) if opts[:year]
+			self.where(cohort: opts[:value])
 		end
 
-		def sort_by_year(opts)
-			self.find(year: opts[:year].year)
+		def search_projects(search_term)
+			PgSearch.multisearch(search_term).map { |result| Project.find(result.searchable_id)  }
 		end
-
-		# def search_projects(search_term)
-		# 	PgSearch.multisearch(search_term)
-		# end
 
 	end
 

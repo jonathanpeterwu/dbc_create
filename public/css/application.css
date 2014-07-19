@@ -4,6 +4,10 @@
 	background-color: #32393F;
 }
 
+#submit-search {
+	height: 36px;
+}
+
 .createprojects {
 	margin-top: 40px;
 	margin-left: 15%;
@@ -41,11 +45,19 @@
 }
 /*=============SORTING BUTTONS===================*/
 .sorting-div {
+	text-align: center;
 	position: relative;
 	margin-top: 2%;
 }
 
-.sorting-div p {
+.searching-div {
+	text-align: center;
+	position: relative;
+	padding-bottom: 5px;
+	margin-top: 2%;
+}
+
+.sorting-div p, .searching-div {
 	text-align: center;
 	color: white;
 }
@@ -222,7 +234,7 @@ input{
 	width: 100%;
 	color: white;
 	background-color: #E54739;
-	height: 680px;
+	height: 800px;
 	padding: 30px 0px;
 	margin-bottom: 43px;
 }
@@ -243,3 +255,5 @@ input{
 	}
 
 }
+
+

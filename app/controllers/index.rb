@@ -5,6 +5,8 @@ end
 get '/projects' do
 	if params[:sort]
 		@projects = Project.sort_by(params).shuffle
+	elsif params[:pgsearch]
+		@projects = Project.search_projects(params[:pgsearch]).shuffle
 	else
 		@projects = Project.all.shuffle
 	end
@@ -31,8 +33,9 @@ post '/projects' do
 	end
 end
 
-post '/projects/search' do
-	@projects = Project.search_projects(params).shuffle
+get '/projects/:id' do
+	@project = Project.find params[:id]
+	erb :show
 end
 
 get '/projects/:id/edit' do
