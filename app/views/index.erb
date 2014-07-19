@@ -7,10 +7,14 @@
 	</div>
 
 	<div class="sorting-div">
-	  <p>Sort By <p>
- 		<button class="sort-button"><a href="/projects?sort=chicago" name="sort[location][chicago]">Chicago</a></button>
-		<button class="sort-button"><a href="/projects?sort=sanfrancisco" name="sort[location][sanfrancisco]">San Francisco</a></button>
-		<button class="sort-button"><a href="/projects?sort=newyork" name="sort[location][newyork]">New York</a></button>
+		<form class="dbc-form" action="projects" method="get">
+			<button class="dbc-button sort-button inline" type="submit" name="sort[location]" value="San Francisco">San Francisco</button>
+			<button class="dbc-button sort-button inline" type="submit" name="sort[location]" value="Chicago">Chicago</button>
+			<button class="dbc-button sort-button inline" type="submit" name="sort[location]" value="New York">New York</button>
+			</br>
+			<input type="search" name="pgsearch" placeholder="Full text search">
+			<button class="dbc-button sort-button inline" id="submit-search" class="pure-button">Search</button>
+		</form>
 	</div>
 </div>
 
