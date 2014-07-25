@@ -93,12 +93,23 @@
 	position: relative;
 	float: left;
 	text-align: center;
-	background-color:rgba(255,255,255,0.7);
+	background-color: #E54739;
 	color: black;
 	width: 320px;
 	height: 360px;
 	padding-top: 70px;
 	margin-left: 25px;
+}
+
+.individualproject h3{
+	background-color: white;
+	height: 40px;
+	padding-top: 20px;
+}
+
+.individualproject p{
+	padding-left: 40px;
+	padding-right: 40px;
 }
 
 .location-title {

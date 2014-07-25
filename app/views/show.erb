@@ -14,7 +14,7 @@
 
 <div class="middle-container">
 			<div class="individualproject" id="<%= @project.id %>">
-						<h3>Project: <%= @project.name %></h3>
+						<h3><%= @project.name %></h3>
 						<p><%= @project.description %></p>
 						<p><a href="<%= @project.production_url %>">Project Link </a>, <a href="<%= @project.source_url %>">Github URL</a></p>
 			</div>
@@ -24,9 +24,10 @@
 			<% end %>
 </div>
 
+
+<% if @project.answer1 %>
 <div class="bottom-container">
 		<div class="question-text">
-			<% if @project.answer1 %>
 			<div><p>Question: What technologies did your team use?</p></div>
 			<p><%=  @project.answer1 %></p>
 			<div><p>Question: What was your biggest technical challenge?</p></div>
@@ -35,9 +36,9 @@
 			<p><%=  @project.answer3 %></p>
 			<div><p>Question: What advice do you have for people about to begin their final projects? </p></div>
 			<p><%=  @project.answer4 %></p>
-			<% end %>
 		</div>
 
 		<div class="github-images">
 		</div>
 </div>
+<% end %>
