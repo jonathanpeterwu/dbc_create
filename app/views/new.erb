@@ -1,16 +1,16 @@
 
 <div class="form-container">
 	<img class="example-project-image" style="width: 90%" src="http://imgur.com/9FVKO3w.jpg"/>
-	<form class="dbc-form stacked" action="/projects" method="post">
+	<form class="dbc-form stacked" action="/projects" method="post" enctype="multipart/form-data">
 			All fields are required.<br>
-			<label>Name:</label>
-			<input type="text" name="project[name]"/>
+			<label>Project Title:</label>
+			<input type="text" name="project[name]"required/>
 			<label>Description:</label>
-			<textarea name="project[description]"></textarea>
-			<label>Website:  <h6> Please make sure to include http:// or https:// before each url</h6> </label>
-			<input type="text" name="project[production_url]"/>
-			<label>Github:</label>
-			<input type="text" name="project[source_url]"/>
+			<input type=textarea name="project[description]"></textarea required/>
+		<label>Website: (http://www.example.com) </label>
+			<input type="url" name="project[production_url]" required/>
+			<label>Github: (https://www.github.com) </label>
+			<input type="url" name="project[source_url]" required/>
 			<label>Location:</label>
 			<select name="project[location">
 	      <option></option>
@@ -18,9 +18,9 @@
 	      <option>Chicago</option>
 	      <option>New York</option>
 	   </select>
-			<label>Image Url:			<h6> Please make sure to include a .png/.jpg extension</h6>
- </label>
-			<input type="text" name="project[image_url]"/>
+
+			<label>Image Url:	(.png/.jpg is required)</label>
+			<input type="text" name="project[image_url]" required/>
 			<label>What technologies did your team use?</label>
 			<input type="text" name="project[answer1]"/>
 			<label>What was your biggest technical challenge?</label>

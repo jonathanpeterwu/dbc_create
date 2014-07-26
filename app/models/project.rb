@@ -1,5 +1,4 @@
 class Project < ActiveRecord::Base
-
   include PgSearch
 
  validates :name, :description, :production_url, :source_url, :location, :image_url, presence: true
@@ -11,7 +10,7 @@ class Project < ActiveRecord::Base
 
 	class << self
 		# Using buttons for our sorts, params comes in like so:
-		# opts = {"sort" => {"location"=>"San Francisco"}}
+	# opts = {"sort" => {"location"=>"San Francisco"}}
 		def sort_by(opts)
 			opts = opts["sort"]
 			key = opts.keys[0]
