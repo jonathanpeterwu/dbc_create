@@ -93,12 +93,23 @@
 	position: relative;
 	float: left;
 	text-align: center;
-	background-color:rgba(255,255,255,0.7);
+	background-color: #E54739;
 	color: black;
 	width: 320px;
 	height: 360px;
 	padding-top: 70px;
 	margin-left: 25px;
+}
+
+.individualproject h3{
+	background-color: white;
+	height: 40px;
+	padding-top: 20px;
+}
+
+.individualproject p{
+	padding-left: 40px;
+	padding-right: 40px;
 }
 
 .location-title {
@@ -111,7 +122,7 @@
 	height: 100%;
 }
 
-.location-image {
+.top-container {
 	position: absolute;
 	width: 100%;
 	height: 500px;
@@ -119,7 +130,7 @@
 	margin: 0 auto;
 }
 
-.project-image {
+.middle-container {
 	position: relative;
 	padding-top: 80px;
 	padding-bottom: 80px;
@@ -129,9 +140,40 @@
 	height: 430px;
 	top: 400px;
 }
+
 input{
 	border-style: none;
 	margin: 2px 2px;
+}
+
+.bottom-container {
+	position: relative;
+	margin: 0 auto;
+	background-color: #E54739;
+	top: 400px;
+	height: 400px;
+	padding-top: 80px;
+	padding-bottom: 80px
+}
+
+.question-text {
+	float: left;
+	position: relative;
+	margin-left: 25px;
+	padding: 30px;
+	text-align: left;
+	width: 45%;
+	color: white;
+	background-color: black;
+}
+
+.github-images {
+	float: right;
+	position: relative;
+	margin-right: 50px;
+	background-color: white;
+	width: 40%;
+	height: 348px;
 }
 
 /*Navbar Layout Css*/
