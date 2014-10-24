@@ -8,7 +8,7 @@ get '/projects' do
 	elsif params[:pgsearch]
 		@projects = Project.search_projects(params[:pgsearch]).shuffle
 	else
-		@projects = Project.all.shuffle
+		@projects = Project.all.reverse
 	end
   erb :index
 end
