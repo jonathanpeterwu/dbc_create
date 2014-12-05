@@ -1,44 +1,53 @@
 <div class="top-container">
-		<% if @project.location == "Chicago" %>
-			<img class="project-location-image" src="http://devbootcamp.com/imgs/locations/location-chi-header.jpg"/>
-			<p class="location-title"> Chicago </p>
-		<% elsif @project.location == "San Francisco" %>
-			<img class="project-location-image" src="http://devbootcamp.com/imgs/locations/location-sf-header.jpg"/>
-			<p class="location-title"> San Francisco </p>
-		<% elsif @project.location == "New York" %>
-			<img class="project-location-image" src="http://devbootcamp.com/imgs/locations/location-nyc-header.jpg"/>
-			<p class="location-title"> New York </p>
-		<% end %>
+	<% if @project.location == "Chicago" %>
+	<img class="project-location-image" src="http://devbootcamp.com/imgs/locations/location-chi-header.jpg"/>
+	<p class="location-title"> Chicago </p>
+	<% elsif @project.location == "San Francisco" %>
+	<img class="project-location-image" src="http://devbootcamp.com/imgs/locations/location-sf-header.jpg"/>
+	<p class="location-title"> San Francisco </p>
+	<% elsif @project.location == "New York" %>
+	<img class="project-location-image" src="http://devbootcamp.com/imgs/locations/location-nyc-header.jpg"/>
+	<p class="location-title"> New York </p>
+	<% end %>
 </div>
 
 
 <div class="middle-container">
-			<div class="individualproject" id="<%= @project.id %>">
-						<h3><%= @project.name %></h3>
-						<p><%= @project.description %></p>
-						<p><a href="<%= @project.production_url %>">Project Link </a>, <a href="<%= @project.source_url %>">Github URL</a></p>
+	<div class="container">
+		<div class="clearfix">
+			<div class="col col-6 project-description" id="<%= @project.id %>">
+				<h3><%= @project.name %></h3>
+				<p><%= @project.description %></p>
+				<p><a href="<%= @project.production_url %>">Project Link </a>, <a href="<%= @project.source_url %>">Github URL</a></p>
 			</div>
+			<div class="col col-6">
+				<% if @project.image_url  %>
+				<span<a href="<%= @project.production_url %>"><img src="<%= @project.image_url %>" class="show-image" alt="The owner of this project neglected to upload an image"/></a></span>
+				<% end %>
+			</div>
+		</div>
+	</div>
 
-			<% if @project.image_url  %>
-			<a href="<%= @project.production_url %>"><img src="<%= @project.image_url %>" class="show-image" alt="The owner of this project neglected to upload an image"/></a>
-			<% end %>
+
 </div>
 
 
 <% if @project.answer1 %>
 <div class="bottom-container">
-		<div class="question-text">
-			<div><p>Question: What technologies did your team use?</p></div>
-			<p><%=  @project.answer1 %></p>
-			<div><p>Question: What was your biggest technical challenge?</p></div>
-			<p><%=  @project.answer2 %></p>
-			<div><p>Question: If you could do it over again, what would you change?</p> </div>
-			<p><%=  @project.answer3 %></p>
-			<div><p>Question: What advice do you have for people about to begin their final projects? </p></div>
-			<p><%=  @project.answer4 %></p>
+	<div class="container">
+		<div class="clearfix red">
+			<div class="col col-6 project-questions">
+				<div><p>Question: What technologies did your team use?</p></div>
+				<p><%=  @project.answer1 %></p>
+				<div><p>Question: What was your biggest technical challenge?</p></div>
+				<p><%=  @project.answer2 %></p>
+				<div><p>Question: If you could do it over again, what would you change?</p> </div>
+				<p><%=  @project.answer3 %></p>
+				<div><p>Question: What advice do you have for people about to begin their final projects? </p></div>
+				<p><%=  @project.answer4 %></p>
+			</div>
+			<div class="col col-6 project-github-images">
+			</div>
 		</div>
-
-		<div class="github-images">
-		</div>
-</div>
-<% end %>
+	</div>
+	<% end %>

@@ -2,6 +2,17 @@ get '/' do
 	redirect to '/projects'
 end
 
+post '/vote/:id' do
+	project = Project.find(params[:id])
+	project.vote += 1
+	project.save
+	redirect '/projects'
+end
+
+post '/share' do
+	p "shared"
+end
+
 get '/projects' do
 	if params[:sort]
 		@projects = Project.sort_by(params).shuffle
@@ -10,7 +21,7 @@ get '/projects' do
 	else
 		@projects = Project.all.reverse
 	end
-  erb :index
+    erb :index
 end
 
 get '/projects/new' do

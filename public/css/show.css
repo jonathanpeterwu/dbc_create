@@ -1,0 +1,30 @@
+.project-description{
+	position: relative;
+	float: left;
+	text-align: center;
+	background-color: white;
+	color: black;
+	hieght: 100%;
+}
+
+.project-questions {
+	float: left;
+	position: relative;
+	padding: 30px;
+	text-align: left;
+	color: white;
+	background-color: black;
+}
+
+.project-github-images {
+	float: right;
+	position: relative;
+	padding: 10px;
+	background-color: white;
+	width: 40%;
+	height: 348px;
+}
+
+.red {
+	background-color: #E54739 ;
+}
