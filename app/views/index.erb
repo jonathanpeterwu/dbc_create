@@ -28,12 +28,12 @@
 		<div class="clearfix outline-blue">
 			<% @projects.each do |project| %>
 		  		<div class="col col-4 project-box" id="project_<%= project.id %>">
+		  			<div class="project-image">
+					<a href="/projects/<%= project.id %>"><img src="<%= project.image_url %>" alt="<%= project.name %>"/></a>
+					</div>
 					<div class="project-content" >
 						<div class="project" id="<%= project.id %>">
 							<a class="link" href="/projects/<%= project.id %>"><div class="project-title"><%= project.name %></div></a>
-					</div>
-		  			<div class="project-image">
-					<a href="/projects/<%= project.id %>"><img src="<%= project.image_url %>" alt="<%= project.name %>"/></a>
 					</div>
 				</div>
 		  	</div>
