@@ -117,12 +117,12 @@
 
 .middle-container {
 	position: relative;
-	padding-top: 80px;
-	padding-bottom: 80px;
+	padding-top: 5%;
+	padding-bottom: 5%;
 	margin: 0 auto;
 	background-color: #32393F;
 	text-align: center;
-	height: 430px;
+	height: 50%;
 	top: 400px;
 }
 
@@ -163,10 +163,6 @@ input{
 }
 
 /*Navbar Layout Css*/
-.show-image {
-	width: 70%;
-	height: 90%;
-}
 
 .home-image{
 	align: center;

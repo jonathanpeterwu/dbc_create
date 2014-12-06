@@ -19,21 +19,12 @@
 	height: 100%;
 }
 
-
-
 .project-content{
 	margin-left:10px;
 	background-color: #F6F6F6;
 	padding-top: 15px;
 	padding-bottom: 15px;
 }
-
-.project-title{
-	padding-top: 5px;
-	padding-bottom: 5px;
-	font-size: 1.0em;
-}
-
 
 .project-content div {
 	color: black;
