@@ -1,10 +1,20 @@
 .project-description{
-	position: relative;
-	float: left;
+	padding-bottom: 20px;
+	padding-top: 20px;
 	text-align: center;
-	background-color: white;
-	color: black;
-	hieght: 100%;
+	background-color: black;
+	color: white;
+}
+
+
+.project-title-show{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 2.0em;
+}
+
+.project-title-show h1 {
+	color: white !important;
 }
 
 .project-questions {
@@ -24,6 +34,17 @@
 	width: 40%;
 	height: 348px;
 }
+
+.project-image-holder {
+	margin-top: 2%;
+	overflow: hidden;
+}
+
+.project-image-holder img {
+	width: 100%;
+	height: 100%;
+}
+
 
 .red {
 	background-color: #E54739 ;
