@@ -37,6 +37,8 @@
 
 .project-image-holder {
 	margin-top: 2%;
+	width: 1024px;
+	height: 768px;
 	overflow: hidden;
 }
 
