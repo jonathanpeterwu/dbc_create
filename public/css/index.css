@@ -20,6 +20,10 @@ form > button:hover {
     background-size:     cover;
 }
 
+.bg-grey {
+	background-color: #BBBDBF;
+}
+
 .project-content{
 	margin-left:10px;
 	background-color: #F6F6F6;
@@ -33,8 +37,8 @@ form > button:hover {
 
 .project-container {
 	padding-top: 5%;
-	padding-left: 14%;
-	padding-right: 14%;
+	padding-left: 10%;
+	padding-right: 10%;
 	padding-bottom: 5%;
 	background-color: #32393F !important;
 }

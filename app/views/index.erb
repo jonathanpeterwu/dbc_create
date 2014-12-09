@@ -25,8 +25,8 @@
 
 <div class="project-container">
 	<% @projects.each do |project| %>
-	<div class="col md-col-4 mb2 mt2 px2" id="project_<%= project.id %>">
-		<div class="p2 bg-white border rounded project-box" style="height: 375px;">
+	<div class="col md-col-4 mb2 mt2 px1" id="project_<%= project.id %>">
+		<div class="p2 bg-white border project-box" style="height: 325px;">
 			<a href="/projects/<%= project.id %>" class="project-image"><img class="mb2 project-image" src="<%= project.image_url %>" alt="<%= project.name %>"/></a>
 			<a class="link" href="/projects/<%= project.id %>"><h1 class="h4 mt0 center"><%= project.name %></h1></a>
 			<form action="/vote/<%= project.id %>" class="center" method="POST">
