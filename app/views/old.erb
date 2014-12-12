@@ -1,0 +1,20 @@
+			<div class="col col-4 project-box" id="project_<%= project.id %>">
+		  			<div class="project-image">
+					<a href="/projects/<%= project.id %>"><img src="<%= project.image_url %>" alt="<%= project.name %>"/></a>
+					</div>
+					<div class="project-content" >
+						<div class="project" id="<%= project.id %>">
+							<a class="link" href="/projects/<%= project.id %>"><div class="project-title"><%= project.name %></div></a>
+						<div class="container">
+							<form action="/vote/<%= project.id %>" method="POST">
+								<button class="col-6 button-blue mb2">
+										Vote
+										<% if project.vote > 0  %>
+										(<%= project.vote %>)
+	  									<% end %>
+								</button>
+							</form>
+  						</div>
+					</div>
+				</div>
+		  	</div>

@@ -26,6 +26,11 @@
 				<form action="<%= @project.source_url %>">
 					<button class="col-5 button-blue mb1" href="<%= @project.source_url %>">Github </button>
 				</form>
+				<% if @project.extra_link %>
+				<form action="<%= @project.source_url %>">
+					<button class="col-5 button-blue mb1" href="<%= @project.extra_link %>">Chrome Extension</button>
+				</form>
+				<% end %>
 			</div>
 			<div class="col col-12 project-image-holder center">
 				<% if @project.image_url  %>
