@@ -1,4 +1,4 @@
-/*General Layout CSS*/
+/*General Layout aCSS*/
 #submit-search {
 	height: 36px;
 }
@@ -15,10 +15,10 @@
 	background-color: grey;
 }
 
-.form-container {
-	width: 800px;
-	margin-left: 12%;
-	margin-top: 30px;
+.form {
+	background-color: black !important;
+	/*margin-left: 12%;*/
+	/*margin-top: 30px;*/
 }
 
 #upload-project {
