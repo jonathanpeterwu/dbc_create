@@ -1,33 +1,33 @@
+<div class="container" style="padding-top: 5%;">
+	<div class="clearfix">
+	<form class="form col col-12 px3 py3" style="background-color: #ccc !important;" action="/projects" method="post">
 
-<div class="form-container">
-	<form class="dbc-form stacked" action="/projects" method="post">
-			All fields are required.<br>
-			<label>Name:</label>
-			<input type="text" name="project[name]"/>
-			<label>Description:</label>
-			<textarea name="project[description]"></textarea>
-			<label>Website:</label>
-			<input type="text" name="project[production_url]"/>
-			<label>Github:</label>
-			<input type="text" name="project[source_url]"/>
-			<label>Location:</label>
-			<select name="project[location">
-	      <option></option>
-	      <option>San Francisco</option>
-	      <option>Chicago</option>
-	      <option>New York</option>
-	   </select>
-			<label>Image Url</label>
-			<input type="text" name="project[image_url]"/>
-			<label>What technologies did your team use?</label>
-			<input type="text" name="project[answer1]"/>
-			<label>What was your biggest technical challenge?</label>
-			<input type="text" name="project[answer2]"/>
-			<label>If you could do it over again, what would you change?</label>
-			<input type="text" name="project[answer3]"/>
-			<label>What advice do you have for people about to begin their final projects? </label>
-			<input type="text" name="project[answer4]"/>
-	    <button type="submit" class="dbc-button dbc-button-primary">Submit</button>
+		<label>Project Title:</label>
+		<input class="block full-width field-dark" type="text" name="project[name]" required/>
+		<label>Project Description:</label>
+		<textarea class="block full-width field-dark" name="project[description]" required></textarea>
+		<label>Project Image Url (use a photo image uploader such as imgur please)</label>
+		<input class="block full-width field-dark" type="text" name="project[image_url]" required/>
+		<label>Website:</label>
+		<input class="block full-width field-dark" type="text" name="project[production_url]" required/>
+		<label>Github:</label>
+		<input class="block full-width field-dark" type="text" name="project[source_url]" required/>
+		<label>Location:</label>
+		<select class="block full-width field-dark" name="project[location]" required>
+			<option></option>
+			<option>San Francisco</option>
+			<option>Chicago</option>
+			<option>New York</option>
+		</select>
+		<label>What technologies did your team use?</label>
+		<input class="block full-width field-dark is-success" type="text" name="project[answer1]"/>
+		<label>What was your biggest technical challenge?</label>
+		<input class="block full-width field-dark is-success" type="text" name="project[answer2]"/>
+		<label>If you could do it over again, what would you change?</label>
+		<input class="block full-width field-dark is-success" type="text" name="project[answer3]"/>
+		<label>What advice do you have for people about to begin their final projects? </label>
+		<input class="block full-width field-dark is-success" type="text" name="project[answer4]"/>
+		<button type="submit" class="button-blue">Submit</button>
 	</form>
+	</div>
 </div>
-

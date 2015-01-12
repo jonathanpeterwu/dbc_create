@@ -1,12 +1,12 @@
 <div class="top-container">
 	<% if @project.location == "Chicago" %>
-	<img class="project-location-image" src="http://devbootcamp.com/imgs/locations/location-chi-header.jpg"/>
+	<img class="project-location-image" src="http://res.cloudinary.com/dcv81ltjm/image/upload/v1421100397/chi_lf2cmh.jpg"/>
 	<p class="location-title"> Chicago </p>
 	<% elsif @project.location == "San Francisco" %>
-	<img class="project-location-image" src="http://devbootcamp.com/imgs/locations/location-sf-header.jpg"/>
+	<img class="project-location-image" src="http://res.cloudinary.com/dcv81ltjm/image/upload/v1421100397/sf_uh2qmf.jpg"/>
 	<p class="location-title"> San Francisco </p>
 	<% elsif @project.location == "New York" %>
-	<img class="project-location-image" src="http://devbootcamp.com/imgs/locations/location-nyc-header.jpg"/>
+	<img class="project-location-image" src="http://res.cloudinary.com/dcv81ltjm/image/upload/v1421100397/nyc_sfwoyx.jpg"/>
 	<p class="location-title"> New York </p>
 	<% end %>
 </div>
@@ -26,10 +26,15 @@
 				<form action="<%= @project.source_url %>">
 					<button class="col-5 button-blue mb1" href="<%= @project.source_url %>">Github </button>
 				</form>
+				<% if @project.extra_link %>
+				<form action="<%= @project.source_url %>">
+					<button class="col-5 button-blue mb1" href="<%= @project.extra_link %>">Chrome Extension</button>
+				</form>
+				<% end %>
 			</div>
 			<div class="col col-12 project-image-holder center">
 				<% if @project.image_url  %>
-				<a href="<%= @project.production_url %>"><img src="<%= @project.image_url %>" class="project-image-show" alt="The owner of this project neglected to upload an image"/></a>
+				<a href="<%= @project.production_url %>"><img class="col col-12 center" src="<%= @project.image_url %>" class="project-image-show" alt="The owner of this project neglected to upload an image"/></a>
 				<% end %>
 			</div>
 		</div>
