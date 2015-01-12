@@ -8,10 +8,39 @@
 		</form>
 	</div>
 
-	<h3 style="text-align: center; position:relative"> Meet <a class="nav-link" style="color: black;"  href="/projects/22">Tattle</a> Made @ DBC</h3>
-	<div class="home-image">
-		<iframe width="853" height="480" src="//www.youtube.com/embed/TSsuIiJH_hk" frameborder="0" allowfullscreen></iframe>
-	</div>
+		<% @number = (1..6).to_a.sample %>
+		<% if @number == 1 %>
+		<h3 style="text-align: center; position:relative"> Meet <a class="nav-link" style="color: black;"  href="/projects/22">Tattle</a> Made @ DBC</h3>
+		<div class="home-image">
+				<iframe width="853" height="480" src="//www.youtube.com/embed/TSsuIiJH_hk" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<% elsif  @number == 2 %>
+		<h3 style="text-align: center; position:relative"> Meet <strong class="black">For The Cause</strong> Made @ DBC</h3>
+		<div class="home-image">
+			<iframe width="853" height="480" src="//www.youtube.com/embed/avT7ZAONS_8" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<% elsif  @number == 3 %>
+		<h3 style="text-align: center; position:relative"> Meet <strong class="black">The Delta</strong> Made @ DBC</h3>
+		<div class="home-image">
+			<iframe width="853" height="480" src="//www.youtube.com/embed/7FoN4XEiyno" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<% elsif  @number == 4 %>
+		<h3 style="text-align: center; position:relative"> Meet <strong class="black">HalfCourt Press</strong> Made @ DBC</h3>
+		<div class="home-image">
+			<iframe width="853" height="480" src="//www.youtube.com/embed/k0GjJZTbFYg" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<% elsif  @number == 5 %>
+		<h3 style="text-align: center; position:relative"> Meet <strong class="black">Encore</strong> Made @ DBC</h3>
+		<div class="home-image">
+			<iframe width="853" height="480" src="//www.youtube.com/embed/3A_aR2-7bDU" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<% elsif  @number == 6 %>
+		<h3 style="text-align: center; position:relative"> Meet <strong class="black">Zombify</strong> Made @ DBC</h3>
+		<div class="home-image">
+			<iframe width="853" height="480" src="//www.youtube.com/embed/A3pyUYPYMHY" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<% end %>
+
 
 	<div class="sorting-div">
 		<form class="dbc-form" action="projects" method="get">
