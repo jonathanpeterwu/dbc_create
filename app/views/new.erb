@@ -15,9 +15,9 @@
 		<label>Location:</label>
 		<select class="block full-width field-dark" name="project[location]" required>
 			<option></option>
-			<option>San Francisco</option>
-			<option>Chicago</option>
-			<option>New York</option>
+			<% DBC_LOCATION_NAMES.each do |location| %>
+				<option><%= location %></option>
+			<% end %>
 		</select>
 		<label>What technologies did your team use?</label>
 		<input class="block full-width field-dark is-success" type="text" name="project[answer1]"/>
