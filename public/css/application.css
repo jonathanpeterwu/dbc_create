@@ -116,14 +116,12 @@
 }
 
 .middle-container {
-	position: relative;
 	padding-top: 5%;
 	padding-bottom: 5%;
 	margin: 0 auto;
 	background-color: #32393F;
 	text-align: center;
 	height: 50%;
-	top: 400px;
 }
 
 input{
@@ -222,5 +220,3 @@ input{
 	}
 
 }
-
-

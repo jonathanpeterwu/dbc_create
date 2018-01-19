@@ -44,9 +44,9 @@
 
 	<div class="sorting-div">
 		<form class="dbc-form" action="projects" method="get">
-			<button class="dbc-button sort-button inline" type="submit" name="sort[location]" value="San Francisco">San Francisco</button>
-			<button class="dbc-button sort-button inline" type="submit" name="sort[location]" value="Chicago">Chicago</button>
-			<button class="dbc-button sort-button inline" type="submit" name="sort[location]" value="New York">New York</button>
+			<% DBC_LOCATION_NAMES.each do |location| %>
+				<button class="dbc-button sort-button inline" type="submit" name="sort[location]" value="<%= location %>"><%= location %></button>
+			<% end %>
 		</form>
 	</div>
 
