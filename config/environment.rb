@@ -49,5 +49,8 @@ end
 Dir[APP_ROOT.join('app', 'controllers', '*.rb')].each { |file| require file }
 Dir[APP_ROOT.join('app', 'helpers', '*.rb')].each { |file| require file }
 
+# Load constants
+require APP_ROOT.join('config', 'constants')
+
 # Set up the database and models
 require APP_ROOT.join('config', 'database')
