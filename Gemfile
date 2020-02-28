@@ -20,7 +20,7 @@ gem 'activerecord'
 gem 'pry'
 gem 'pg_search'
 
-gem 'rake', '10.3.1'
+gem 'rake', '12.3.3'
 
 gem 'shotgun'
 
